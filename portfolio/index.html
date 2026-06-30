@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anayat Bhat | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Anayat Bhat</a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-image">
+                    <img src="images/profile.jpg" alt="Anayat Bhat Profile">
+                </div>
+                <div class="hero-content">
+                    <h1>Hi, I'm <span class="highlight">Anayat Bhat</span></h1>
+                    <h2>Frontend Developer | AI & Data Science Student</h2>
+                    <p>Building seamless digital experiences with clean code and data-driven insights.</p>
+                    <div class="hero-buttons">
+                        <a href="resume.pdf" class="btn btn-primary" download><i class="fas fa-download"></i> Download Resume</a>
+                        <a href="#contact" class="btn btn-accent">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <p>I am an AI & Data Science student passionate about web development and programming. I enjoy creating responsive websites using HTML, CSS, and JavaScript, bridging the gap between intelligent data backends and beautiful, user-centric frontends.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fab fa-html5 text-primary"></i> <h3>HTML</h3></div>
+                    <div class="skill-card"><i class="fab fa-css3-alt text-primary"></i> <h3>CSS</h3></div>
+                    <div class="skill-card"><i class="fab fa-js text-primary"></i> <h3>JavaScript</h3></div>
+                    <div class="skill-card"><i class="fab fa-git-alt text-primary"></i> <h3>Git</h3></div>
+                    <div class="skill-card"><i class="fab fa-github text-primary"></i> <h3>GitHub</h3></div>
+                    <div class="skill-card"><i class="fab fa-python text-primary"></i> <h3>Python</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <img src="images/project1.png" alt="Personal Portfolio Screenshot" class="project-img">
+                        <div class="project-info">
+                            <h3>Personal Portfolio</h3>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <p>A responsive developer portfolio showcasing projects and skills.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/project2.png" alt="Calculator App Screenshot" class="project-img">
+                        <div class="project-info">
+                            <h3>Calculator</h3>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <p>A clean, functional web calculator handling basic arithmetic operations operations.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/project3.png" alt="To-Do App Screenshot" class="project-img">
+                        <div class="project-info">
+                            <h3>To-Do App</h3>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <p>A task management app featuring task persistence using LocalStorage.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                        <span class="error-message" id="name-error">Please enter your name.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                        <span class="error-message" id="email-error">Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                        <span class="error-message" id="message-error">Please enter a message.</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Anayat Bhat. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your.email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
