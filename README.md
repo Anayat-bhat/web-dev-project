@@ -9,3 +9,5 @@ Home, About, Skills, Projects, Contact.
 Technologies: HTML, CSS, JavaScript
 Addition, Subtraction, Multiplication, Division, Dark Mode. Learn DOM, Events, Functions,
 Conditionals
+
+

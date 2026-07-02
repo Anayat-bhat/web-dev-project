@@ -1,0 +1,199 @@
+/* --- CSS Variables for Light Mode --- */
+
+:root {
+    --bg-body: #f4f4f6;
+    --bg-calculator: #ffffff;
+    --bg-display: #f0f0f3;
+    --text-primary: #333333;
+    --text-secondary: #888888;
+    --btn-bg: #e9e9ed;
+    --btn-bg-hover: #ddddf0;
+    --btn-bg-active: #cccccc;
+    --btn-alt: #d1d1d6;
+    --btn-op: #ff9f0a;
+    --btn-op-text: #ffffff;
+    --shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- CSS Variables for Dark Mode --- */
+
+.dark-mode {
+    --bg-body: #1c1c1e;
+    --bg-calculator: #2c2c2e;
+    --bg-display: #1c1c1e;
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --btn-bg: #3a3a3c;
+    --btn-bg-hover: #48484a;
+    --btn-bg-active: #545456;
+    --btn-alt: #48484a;
+    --btn-op: #ff9f0a;
+    --btn-op-text: #ffffff;
+    --shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator-container {
+    background-color: var(--bg-calculator);
+    width: 100%;
+    max-width: 360px;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+/* --- Theme Switcher Styling --- */
+
+.theme-toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.mode-icon {
+    font-size: 14px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--btn-op);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 20px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* --- Display Grid --- */
+
+.display {
+    background-color: var(--bg-display);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-bottom: 20px;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.previous-operand {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    min-height: 24px;
+}
+
+.current-operand {
+    color: var(--text-primary);
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+/* --- Buttons Grid --- */
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background-color: var(--btn-bg);
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 18px 0;
+    border-radius: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: var(--btn-bg-hover);
+}
+
+.btn:active {
+    background-color: var(--btn-bg-active);
+}
+
+.btn.span-two {
+    grid-column: span 2;
+}
+
+.btn.color-alt {
+    background-color: var(--btn-alt);
+}
+
+.btn.color-op {
+    background-color: var(--btn-op);
+    color: var(--btn-op-text);
+}
+
+.btn.color-op:hover {
+    filter: brightness(110%);
+}
+
+.btn.color-op:active {
+    filter: brightness(90%);
+}
